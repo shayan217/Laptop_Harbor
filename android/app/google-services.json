@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "181392368151",
+    "project_id": "laptop-harbor-50868",
+    "storage_bucket": "laptop-harbor-50868.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181392368151:android:fb07825835d1257f3d3252",
+        "android_client_info": {
+          "package_name": "com.example.lhstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181392368151-glike24p73mi3lob4h2fj68bbg7vbcn8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lhstore",
+            "certificate_hash": "47e7464382687a351524d360405ee17b85a537d9"
+          }
+        },
+        {
+          "client_id": "181392368151-es9tueq5751jr6tr6692mieov710erin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBis7pqaTMBgx_JF3fdD1QKPOEu0NeVelI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181392368151-es9tueq5751jr6tr6692mieov710erin.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "181392368151-gsevkclir92d04c41aubdslm52etie3l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.lhstore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

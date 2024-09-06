@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCjWLk3BRZK8WTBk6j34uyQlb0-yS0HxCQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>181392368151</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.lhstore</string>
+	<key>PROJECT_ID</key>
+	<string>laptop-harbor-50868</string>
+	<key>STORAGE_BUCKET</key>
+	<string>laptop-harbor-50868.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:181392368151:ios:012e862bfbf4efc73d3252</string>
+</dict>
+</plist>
