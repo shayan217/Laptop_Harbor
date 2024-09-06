@@ -8,42 +8,50 @@ on:
       - main
       - master
       - develop
+
 name: "Build & Release"
+
 jobs:
   build:
     name: Build & Release
     runs-on: windows-latest
+
     steps:
       - uses: actions/checkout@v3
+
+      # Install Java (if needed for Android builds)
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
           java-version: '12'
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          architecture: x64
 
-      - run: flutter build apk --release --split-per-abi
-      # - run: |
-      #     flutter build ios --no-codesign
-      #     cd build/ios/iphoneos
-      #     mkdir Payload
-      #     cd Payload
-      #     ln -s ../Runner.app
-      #     cd ..
-      #     zip -r app.ipa Payload
+      # Install FVM
+      - name: Install FVM
+        run: pub global activate fvm
+
+      # Install Flutter 3.16.0 using FVM
+      - name: Use Flutter 3.16.0 via FVM
+        run: fvm install 3.16.0
+
+      # Set Flutter to 3.16.0
+      - name: Set Flutter Version
+        run: fvm use 3.16.0
+
+      # Get dependencies with FVM
+      - name: Get dependencies
+        run: fvm flutter pub get
+
+      # Build APK using FVM
+      - name: Build APK
+        run: fvm flutter build apk --release --split-per-abi
+
+      # Push APK to Releases
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/apk/release/*,build/ios/iphoneos/app.ipa"
+          artifacts: "build/app/outputs/apk/release/*"
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.LaptopHarborToken }}
-
-
-
-
-
 
 # push to master, main, develop
 # pull request on main master
