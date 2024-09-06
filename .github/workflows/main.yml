@@ -25,9 +25,14 @@ jobs:
           distribution: 'zulu'
           java-version: '12'
 
-      # Install FVM
+      # Install Flutter (needed for pub and FVM)
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      # Install FVM via pub
       - name: Install FVM
-        run: pub global activate fvm
+        run: flutter pub global activate fvm
 
       # Install Flutter 3.16.0 using FVM
       - name: Use Flutter 3.16.0 via FVM
@@ -52,6 +57,3 @@ jobs:
           artifacts: "build/app/outputs/apk/release/*"
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.LaptopHarborToken }}
-
-# push to master, main, develop
-# pull request on main master
